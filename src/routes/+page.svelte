@@ -13,21 +13,21 @@ export let form;
  <div>
  
  <label class="label text-slate-500 mr-4" for="name">Name </label>
-<input type="text" name="name" placeholder="Type here" class="ring-1 ring-slate-200 focus:outline-none rounded-sm input w-full"  />
+<input type="text" name="name" placeholder="Type here" class="ring-1 ring-slate-200 focus:outline-none rounded-sm input w-full" value={form?.name ?? ""} />
    {#if form?.errors?.name }
     <span class="py-2 px-1 text-red-400">{form?.errors?.name[0]}</span>
    {/if}
  </div>
  <div>
  <label class="label text-slate-500 mr-4" for="name">Email </label>
-   <input type="email" name="email" placeholder="Type here" class="ring-1 ring-slate-200 focus:outline-none rounded-sm input w-full" />
+   <input type="email" name="email" placeholder="Type here" class="ring-1 ring-slate-200 focus:outline-none rounded-sm input w-full" value={form?.email ?? ""}/>
    {#if form?.errors?.email }
     <span class="py-2 px-1 text-red-400">{form?.errors?.email[0]}</span>
    {/if}
  </div>
  <div>
  <label class="label text-slate-500 mr-4" for="name">Message </label>
-   <textarea name="message" class="textarea ring-1 ring-slate-200 focus:outline-none rounded-sm w-full" placeholder="Message" ></textarea>
+   <textarea name="message" class="textarea ring-1 ring-slate-200 focus:outline-none rounded-sm w-full" placeholder="Message" value={form?.message ?? ""}></textarea>
       
    {#if form?.errors?.message }
     <span class="py-2 px-1 text-red-400">{form?.errors?.message[0]}</span>
