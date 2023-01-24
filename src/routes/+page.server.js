@@ -25,7 +25,7 @@ export const actions = {
 		try {
 			const result = contactSchema.parse(formData);
 			console.log('success!');
-			console.log(result);
+			// console.log(result);
 		} catch (err) {
 			const { fieldErrors: errors } = err.flatten();
 			const { name, email, message } = formData;
