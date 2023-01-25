@@ -1,4 +1,5 @@
 <script>
+import {enhance} from "$app/forms"
 import {page} from "$app/stores"
 export let form; 
 
@@ -9,7 +10,7 @@ export let form;
 
 
 <div class="w-3/6 mt-4 rounded-sm p-8 bg-slate-100 ">
-<form class="my-4 " action="?/contactUs" method= "POST">
+<form class="my-4 " action="?/contactUs" method= "POST" use:enhance>
  <div>
  
  <label class="label text-slate-500 mr-4" for="name">Name </label>
